@@ -3,7 +3,7 @@ import {useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import "./image.scss"
 
-const Image = () => {
+const Image = ({setSelectedImg}) => {
     const data = useStaticQuery(graphql`
         {
             allContentfulImage {
@@ -33,6 +33,7 @@ const Image = () => {
                     className="image-item"
                     fluid={image.image.fluid}
                     alt={image.title}
+                    onClick={() => setSelectedImg(image.image.fluid)}
                     />
                 ))}
             </div>
