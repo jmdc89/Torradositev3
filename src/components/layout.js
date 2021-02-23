@@ -7,25 +7,25 @@ import Sidebar from "./Navbar/sidebar"
 import Footer from "./Footer"
 
 const Layout = ({ children }) => {
-
     const [isOpen, setIsOpen] = React.useState(false)
     const toggleSidebar = () => {
-        setIsOpen(!isOpen)
+      setIsOpen(!isOpen)
     }
-
+  
     return (
-        <>
-            <Navbar />
-            <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-            {/* <main>{children}</main>
-            <Footer /> */}
-        </>
+      <>
+        <Navbar toggleSidebar={toggleSidebar} />
+        <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+        {children}
+        <Footer />
+      </>
     )
-
-}
+  }
+  
+  export default Layout
 
 // Layout.PropTypes = {
 //     children: PropTypes.node.isRequired,
 // }
 
-export default Layout
+
