@@ -7,7 +7,7 @@ import firma from '../../assets/firmainvertida.png'
 import {firmaimg, logoimg} from './navbar.module.scss'
 
 
-const Navbar = () => {
+const Navbar2 = () => {
 
     const [click, setClick] = useState(false)
     const [scroll, setScroll] = useState(false)
