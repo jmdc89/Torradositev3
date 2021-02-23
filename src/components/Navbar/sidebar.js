@@ -1,6 +1,7 @@
 import React from "react"
 import Links from "../../constants/links"
 import { FaTimes } from "react-icons/fa"
+import './sidebar.scss'
 
 const Sidebar = ({isOpen,toggleSidebar}) => {
 
