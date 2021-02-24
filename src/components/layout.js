@@ -1,7 +1,6 @@
 import { graphql, useStaticQuery} from "gatsby"
 import PropTypes from "prop-types"
-import React, { useState } from 'react'
-import "./layout.scss"
+import React from 'react'
 import Navbar from "./Navbar/navbar"
 import Sidebar from "./Navbar/sidebar"
 import Footer from "./Footer"

@@ -2,6 +2,7 @@ import React from 'react';
 import {useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import "./image.scss"
+import Swal from 'sweetalert2'
 
 const Image = ({setSelectedImg}) => {
     const data = useStaticQuery(graphql`
@@ -22,7 +23,6 @@ const Image = ({setSelectedImg}) => {
         } 
     `)
 
-    console.log(data.allContentfulImage.nodes);
 
     return (
         <div className="image-container">
@@ -33,7 +33,6 @@ const Image = ({setSelectedImg}) => {
                     className="image-item"
                     fluid={image.image.fluid}
                     alt={image.title}
-                    onClick={() => setSelectedImg(image.image.fluid)}
                     />
                 ))}
             </div>
